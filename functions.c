@@ -50,12 +50,13 @@ int collision(PIECE *piece, GRID *grid, int direction) {
   return 0;
 }
 
-int endgame(GRID *grid) {
-  int x;
-  for (x=0; x<10; x++) {
-    if (grid->layer[0][x] != 0) {
-      return 1;
-    }
+int endgame(GRID *grid, PIECE *piece) {
+  if (grid->layer[0][4] != 0 || grid->layer[1][4] != 0) {
+    return 1;
+  } else if (grid->layer[4][4] != 0 && piece->choice == 1) {
+    return 1;
+  } else if (grid->layer[3][4] !=0 && (piece->choice == 6 || piece->choice == 7)) {
+    return 1;
   }
   return 0;
 
@@ -80,3 +81,4 @@ void placar(SDL_Surface *screen, int lvl, int pnt) {
   text = TTF_RenderText_Solid(font, str, color);
   blit_surface(screen, text, 330, 390);
 }
+

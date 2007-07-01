@@ -56,6 +56,10 @@ int main(int argc, char **argv) {
   init_grid(&grid);
   start_time = SDL_GetTicks();
   while(quit == 0){
+     if (endgame(&grid, &current_block)) {
+      quit = 1;
+      break;
+    }
     blit_surface(screen, gridBG, 5, 5);
     draw_piece(&current_block, screen, 0);
     draw_grid(&grid, screen);
@@ -63,9 +67,6 @@ int main(int argc, char **argv) {
     blit_surface(screen, placarBG, 323, 210);
     placar(screen, lvl, pnt);
     SDL_Flip(screen);
-    if (endgame(&grid)) {
-      quit = 1;
-    }
 
     while(SDL_PollEvent(&event)) {
       if( event.type == SDL_QUIT ) {
@@ -85,7 +86,7 @@ int main(int argc, char **argv) {
         }
       }
     }
-    if ((SDL_GetTicks() - start_time)/10 > 30) {
+    if ((SDL_GetTicks() - start_time)/10 > 10) {
       if (collision(&current_block, &grid, 1) == 1) {
         pnt += 50;
         add_grid(&grid, &current_block);
@@ -100,6 +101,8 @@ int main(int argc, char **argv) {
       start_time = SDL_GetTicks();
     }
   }
+
+  SDL_Delay(5000);
 
   SDL_FreeSurface(gridBG);
 
