@@ -47,7 +47,7 @@ int main(int argc, char **argv) {
   placar(screen, lvl, pnt);
 
   PIECE current_block;
-  init_piece(&current_block, rand()%7+1);
+  init_piece(&current_block, 1);
   PIECE next_block;
   init_piece(&next_block, rand()%7+1);
   draw_piece(&next_block, screen, 1);
@@ -87,7 +87,7 @@ int main(int argc, char **argv) {
         }
       }
     }
-    if ((SDL_GetTicks() - start_time)/10 > 10) {
+    if ((SDL_GetTicks() - start_time)/10 > 100) {
       if (collision(&current_block, &grid, 1) == 1) {
         pnt += 50;
         add_grid(&grid, &current_block);
