@@ -55,6 +55,7 @@ int main(int argc, char **argv) {
   GRID grid;
   init_grid(&grid);
   start_time = SDL_GetTicks();
+
   while(quit == 0){
      if (endgame(&grid, &current_block)) {
       quit = 1;
@@ -101,8 +102,9 @@ int main(int argc, char **argv) {
       start_time = SDL_GetTicks();
     }
   }
-
-  SDL_Delay(5000);
+  game_over(screen);
+  SDL_Flip(screen);
+  SDL_Delay(1000);
 
   SDL_FreeSurface(gridBG);
 

@@ -82,3 +82,12 @@ void placar(SDL_Surface *screen, int lvl, int pnt) {
   blit_surface(screen, text, 330, 390);
 }
 
+void game_over(SDL_Surface *screen) {
+  SDL_Surface *text = NULL;
+  TTF_Font *font;
+  SDL_Color color = { 000, 000, 000 };
+
+  font = TTF_OpenFont(".\\data\\lazy.ttf", 50);
+  text = TTF_RenderText_Solid(font, "Game Over", color);
+  blit_surface(screen, text, 50, 125);
+}
