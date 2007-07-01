@@ -58,7 +58,7 @@ void linefilled_grid(GRID *self) {
       for (x=0; x<10; x++) {
         self->layer[y][x] = 0;
         removeline_grid(self, y);
-        pnt += 100;
+        pnt += 1;
       }
     }
     has = 1;
@@ -82,5 +82,8 @@ void removeline_grid(GRID *self, int line) {
       }
     }
     has = 1;
+  }
+  if (pnt >= (lvl*100) + ((lvl-1)*100)) {
+    lvl += 1;
   }
 }

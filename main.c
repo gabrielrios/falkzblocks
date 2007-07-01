@@ -47,7 +47,7 @@ int main(int argc, char **argv) {
   placar(screen, lvl, pnt);
 
   PIECE current_block;
-  init_piece(&current_block, 1);
+  init_piece(&current_block, rand()%7+1);
   PIECE next_block;
   init_piece(&next_block, rand()%7+1);
   draw_piece(&next_block, screen, 1);
@@ -58,6 +58,9 @@ int main(int argc, char **argv) {
 
   while(quit == 0){
      if (endgame(&grid, &current_block)) {
+      game_over(screen);
+      SDL_Flip(screen);
+      SDL_Delay(1000);
       quit = 1;
       break;
     }
@@ -87,9 +90,9 @@ int main(int argc, char **argv) {
         }
       }
     }
-    if ((SDL_GetTicks() - start_time)/10 > 100) {
+    if ((SDL_GetTicks() - start_time)/10 > (30 / (lvl*0.5))) {
       if (collision(&current_block, &grid, 1) == 1) {
-        pnt += 50;
+        pnt += 1;
         add_grid(&grid, &current_block);
         current_block = next_block;
         init_piece(&next_block, rand()%7+1);
@@ -102,11 +105,15 @@ int main(int argc, char **argv) {
       start_time = SDL_GetTicks();
     }
   }
-  game_over(screen);
-  SDL_Flip(screen);
-  SDL_Delay(1000);
+
 
   SDL_FreeSurface(gridBG);
+  SDL_FreeSurface(nextBG);
+  SDL_FreeSurface(placarBG);
+  SDL_FreeSurface(screen);
+  free(&grid);
+  free(&current_block);
+  free(&next_block);
 
   TTF_Quit();
   SDL_Quit();

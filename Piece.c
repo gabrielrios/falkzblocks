@@ -105,7 +105,7 @@ void fall_piece(PIECE *self) {
 int rotate_piece(PIECE *self) {
   if (self->choice != 1 && self->xPos+self->format[3][0] >= 9) {
     return 0;
-  } else if(self->xPos+self->format[3][0] >=7 && self->state == 1) {
+  } else if(self->choice == 1 && self->xPos+self->format[3][0] >= 7 && self->state == 1) {
     return 0;
   }
   if (self->choice == 1) {
