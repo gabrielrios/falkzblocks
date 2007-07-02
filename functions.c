@@ -114,6 +114,15 @@ void game_over(SDL_Surface *screen) {
 int paused(int pause) {
   SDL_Event event;
 
+  SDL_Surface *text = NULL;
+  TTF_Font *font;
+  SDL_Color color = { 000, 000, 000 };
+
+  font = TTF_OpenFont(".\\data\\lazy.ttf", 50);
+  text = TTF_RenderText_Solid(font, "PAUSED", color);
+  blit_surface(screen, text, 70, 125);
+  SDL_Flip(screen);
+
   while (pause) {
     while(SDL_PollEvent(&event)) {
       if( event.type == SDL_QUIT ) {
@@ -133,5 +142,8 @@ int paused(int pause) {
       }
     }
   }
+
+  SDL_FreeSurface(text);
+
   return pause;
 }
