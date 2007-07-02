@@ -1,5 +1,20 @@
 #include "SDL_image.h"
 
+void clean() {
+  SDL_FreeSurface(gridBG);
+  SDL_FreeSurface(nextBG);
+  SDL_FreeSurface(placarBG);
+  SDL_FreeSurface(screen);
+  free(&grid);
+  free(&current_block);
+  free(&next_block);
+
+
+  TTF_Quit();
+  SDL_Quit();
+}
+
+
 SDL_Surface *load_image(char *filename) {
   SDL_Surface *loaded = NULL, *optimized = NULL;
 
@@ -94,4 +109,29 @@ void game_over(SDL_Surface *screen) {
   blit_surface(screen, text, 50, 125);
 
   SDL_FreeSurface(text);
+}
+
+int paused(int pause) {
+  SDL_Event event;
+
+  while (pause) {
+    while(SDL_PollEvent(&event)) {
+      if( event.type == SDL_QUIT ) {
+        clean();
+        exit(0);
+      }
+      else if (event.type == SDL_KEYDOWN) {
+        switch(event.key.keysym.sym) {
+          case SDLK_p:
+            pause = 0; break;
+          case SDLK_ESCAPE:
+            clean();
+            exit(0);
+          default:
+            break;
+        }
+      }
+    }
+  }
+  return pause;
 }

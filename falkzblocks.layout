@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
-	<ActiveTarget name="Debug" />
+	<ActiveTarget name="Release" />
 	<File name="Grid.c" open="1" top="0" tabpos="6">
 		<Cursor position="1561" topLine="5" />
 	</File>
@@ -13,14 +13,14 @@
 	<File name="falkzblocks_private.rc" open="0" top="0" tabpos="0">
 		<Cursor position="61" topLine="0" />
 	</File>
-	<File name="functions.c" open="1" top="0" tabpos="5">
-		<Cursor position="2513" topLine="0" />
+	<File name="functions.c" open="1" top="1" tabpos="5">
+		<Cursor position="2990" topLine="106" />
 	</File>
 	<File name="header.h" open="1" top="0" tabpos="7">
-		<Cursor position="94" topLine="0" />
+		<Cursor position="72" topLine="0" />
 	</File>
-	<File name="main.c" open="1" top="1" tabpos="1">
-		<Cursor position="1167" topLine="34" />
+	<File name="main.c" open="1" top="0" tabpos="1">
+		<Cursor position="509" topLine="89" />
 	</File>
 	<File name="surface.c" open="1" top="0" tabpos="4">
 		<Cursor position="574" topLine="0" />
