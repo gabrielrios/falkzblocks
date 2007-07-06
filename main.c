@@ -4,26 +4,20 @@
 #include "time.h"
 #include "header.h"
 
-int main(int argc, char **argv) {
-  SDL_Event event;
-  Uint32 start_time;
-
-  int quit = 0, pause = 0;
-  srand(time(NULL));
-
-  if (SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO) == -1) {
+int init_prog() {
+    if (SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO) == -1) {
     fprintf(stderr, "Impossivel Inicializar a SDL");
-    return -1;
+    return 0;
   }
   if(TTF_Init()==-1) {
     printf("TTF_Init: %s\n", TTF_GetError());
-    exit(2);
+    return 0;
   }
 
   screen = SDL_SetVideoMode(463, 503, 32, SDL_HWSURFACE | SDL_DOUBLEBUF);
   if (screen == NULL) {
     fprintf(stderr, "Impossivel criar a 'tela'");
-    return -1;
+    return 0;
   }
 
   SDL_WM_SetCaption("Falkz Blocks", NULL);
@@ -31,25 +25,40 @@ int main(int argc, char **argv) {
 
   SDL_EnableKeyRepeat(500, 30);
 
+  return 1;
+}
+
+
+int main(int argc, char **argv) {
+  SDL_Event event;
+  Uint32 start_time;
+
+  int quit = 0, pause = 0;
+  srand(time(NULL));
+
+  if (init_prog() == 0) {
+    exit(-1);
+  }
+
   //Cria a surface q ficara ao fundo do jogo
   gridBG = surface(313, 493);
   fill_surface(gridBG, 0xFF, 0xFF, 0xFF);
   blit_surface(screen, gridBG, 5, 5);
+  //Cria a surface q ficara ao fundo da proxima peça
   nextBG = surface(135, 200);
   fill_surface(nextBG, 66, 125, 66);
   blit_surface(screen, nextBG, 323,5);
+  //Cria a surface q ficara ao fundo do placar
   placarBG = surface(135, 288);
   fill_surface(placarBG, 00, 66, 82);
   blit_surface(screen, placarBG, 323, 210);
 
   placar(screen, lvl, pnt);
 
-
   init_piece(&current_block, rand()%7+1);
-
   init_piece(&next_block, rand()%7+1);
-  draw_piece(&next_block, screen, 1);
 
+  draw_piece(&next_block, screen, 1);
 
   init_grid(&grid);
   start_time = SDL_GetTicks();
@@ -73,7 +82,7 @@ int main(int argc, char **argv) {
     placar(screen, lvl, pnt);
     SDL_Flip(screen);
 
-    while(SDL_PollEvent(&event)) {
+   while(SDL_PollEvent(&event)) {
       if( event.type == SDL_QUIT ) {
         quit = 1;
       }
@@ -97,7 +106,9 @@ int main(int argc, char **argv) {
       if (collision(&current_block, &grid, 1) == 1) {
         pnt += 1;
         add_grid(&grid, &current_block);
+        free(&current_block);
         current_block = next_block;
+        free(&next_block);
         init_piece(&next_block, rand()%7+1);
         blit_surface(screen, nextBG, 323,5);
         draw_piece(&next_block, screen, 1);

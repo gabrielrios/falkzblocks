@@ -13,10 +13,13 @@ void fill_surface(SDL_Surface *self, Uint8 r, Uint8 g, Uint8 b) {
 }
 
 SDL_Surface* surface(int W, int H) {
-  SDL_Surface *self;
+  SDL_Surface *self, *opti;
   self = SDL_CreateRGBSurface(SDL_SWSURFACE, W, H, 32, 0, 0, 0, 0);
   if (self == NULL) {
     fprintf(stderr, "Falha ao criar a surface");
   }
-  return self;
+  opti = SDL_DisplayFormat(self);
+  SDL_FreeSurface(self);
+
+  return opti;
 }

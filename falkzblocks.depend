@@ -223,14 +223,14 @@
 	"begin_code.h"
 	"close_code.h"
 
-1183335415 source:c:\gabriel\projects\programacao\falkzblocks\main.c
+1183678028 source:c:\gabriel\projects\programacao\falkzblocks\main.c
 	"SDL.h"
 	"SDL_image.h"
 	"SDL_ttf.h"
 	"time.h"
 	"header.h"
 
-1183335155 c:\gabriel\projects\programacao\falkzblocks\header.h
+1183677229 c:\gabriel\projects\programacao\falkzblocks\header.h
 	"class.h"
 	"surface.c"
 	"functions.c"
@@ -239,9 +239,9 @@
 
 1183319361 c:\gabriel\projects\programacao\falkzblocks\class.h
 
-1183319362 c:\gabriel\projects\programacao\falkzblocks\surface.c
+1183676219 c:\gabriel\projects\programacao\falkzblocks\surface.c
 
-1183335687 c:\gabriel\projects\programacao\falkzblocks\functions.c
+1183677806 c:\gabriel\projects\programacao\falkzblocks\functions.c
 	"SDL_image.h"
 
 1183331185 c:\gabriel\projects\programacao\falkzblocks\piece.c

@@ -1,5 +1,6 @@
 #include "SDL_image.h"
 
+
 void clean() {
   SDL_FreeSurface(gridBG);
   SDL_FreeSurface(nextBG);
@@ -13,7 +14,6 @@ void clean() {
   TTF_Quit();
   SDL_Quit();
 }
-
 
 SDL_Surface *load_image(char *filename) {
   SDL_Surface *loaded = NULL, *optimized = NULL;
@@ -96,6 +96,7 @@ void placar(SDL_Surface *screen, int lvl, int pnt) {
   text = TTF_RenderText_Solid(font, str, color);
   blit_surface(screen, text, 330, 390);
 
+  TTF_CloseFont(font);
   SDL_FreeSurface(text);
 }
 
@@ -108,6 +109,7 @@ void game_over(SDL_Surface *screen) {
   text = TTF_RenderText_Solid(font, "Game Over", color);
   blit_surface(screen, text, 50, 125);
 
+  TTF_CloseFont(font);
   SDL_FreeSurface(text);
 }
 
@@ -142,7 +144,8 @@ int paused(int pause) {
       }
     }
   }
-
+  free(&color);
+  TTF_CloseFont(font);
   SDL_FreeSurface(text);
 
   return pause;
