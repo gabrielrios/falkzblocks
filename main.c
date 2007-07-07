@@ -29,7 +29,7 @@ int init() {
   SDL_EnableKeyRepeat(500, 30);
 
   font = TTF_OpenFont(".\\data\\font\\ABSTRACT.ttf", 10);
-  fontp = TTF_OpenFont(".\\data\\font\\ABSTRACT.ttf", 6);
+  font_placar = TTF_OpenFont(".\\data\\font\\ABSTRACT.ttf", 6);
 
   init_block_images();
   init_grid();
@@ -52,24 +52,39 @@ int main(int argc, char **argv) {
   init_piece(&peca_atual, rand()%7+1);
   init_piece(&proxima_peca, rand()%7+1);
 
+
+
   background = surface(305, 515);
   fill_surface(background, 0xFF, 0xFF, 0xFF);
   blit_at_surface(background, 5, 5);
-  next_background = surface(135, 200);
-  fill_surface(next_background, 130, 130, 130);
+  next_background = surface(140, 200);
+  fill_surface(next_background, 0, 66, 66);
   blit_at_surface(next_background, 315, 5);
+  placar_background = surface(140, 200);
+  fill_surface(placar_background, 30, 30, 130);
+  blit_at_surface(placar_background, 315, 210);
 
+  init_placar();
   desenha_peca(proxima_peca, 0);
 
 
   start_time = SDL_GetTicks();
 
   while (game) {
+    if (endgame(&peca_atual)) {
+      game_over();
+      SDL_Flip(screen);
+      SDL_Delay(1000);
+      game = 1;
+      break;
+    }
     blit_at_surface(background, 5, 5);
+    blit_at_surface(placar_background, 315, 210);
     draw_grid();
     linefilled_grid();
     desenha_peca(peca_atual, 1);
-//    placar(lvl, pnt);
+    init_placar();
+    placar(lvl, pnt);
     if (pause) {
       paused(pause);
       pause = 0;

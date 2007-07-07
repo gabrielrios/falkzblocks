@@ -109,5 +109,53 @@ int paused(int pause) {
   return pause;
 }
 
+int endgame(PIECE *piece) {
+  if (grid[0][4] != 0 || grid[1][4] != 0) {
+    return 1;
+  } else if (grid[4][4] != 0 && piece->choice == 1) {
+    return 1;
+  } else if (grid[3][4] !=0 && (piece->choice == 6 || piece->choice == 7)) {
+    return 1;
+  }
+  return 0;
 
+}
+
+void game_over() {
+  SDL_Surface *text = NULL;
+  SDL_Color color = { 000, 000, 000 };
+
+  text = TTF_RenderText_Solid(font, "Game Over", color);
+  blit_at_surface(text, 30, 125);
+
+  SDL_FreeSurface(text);
+}
+
+void init_placar() {
+  SDL_Surface *text = NULL;
+  SDL_Color color = { 135, 000, 135 };
+  text = TTF_RenderText_Solid(font_placar, "Level", color);
+  blit_at_surface(text, 345, 225);
+  SDL_FreeSurface(text);
+  text = TTF_RenderText_Solid(font_placar, "Pontos", color);
+  blit_at_surface(text, 333, 335);
+
+  SDL_FreeSurface(text);
+}
+void placar(int lvl, int pnt) {
+  SDL_Surface *text = NULL;
+  SDL_Color color = { 255, 255, 000 };
+  char str[10];
+  sprintf(str, "%d", lvl);
+
+  text = TTF_RenderText_Solid(font_placar, str, color);
+  blit_at_surface(text, 400, 280);
+  SDL_FreeSurface(text);
+
+  sprintf(str, "%06d", pnt);
+  text = TTF_RenderText_Solid(font_placar, str, color);
+  blit_at_surface(text, 335, 390);
+
+  SDL_FreeSurface(text);
+}
 

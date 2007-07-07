@@ -6,6 +6,7 @@
 SDL_Surface *screen = NULL;
 SDL_Surface *background = NULL;
 SDL_Surface *next_background = NULL;
+SDL_Surface *placar_background = NULL;
 
 //Blocks Image Global Surface
 SDL_Surface *anil_block = NULL;
@@ -29,6 +30,6 @@ int pnt = 0;
 Uint32 start_time;
 
 TTF_Font *font;
-TTF_Font *fontp;
+TTF_Font *font_placar;
 
 #endif // GLOBALS_H_INCLUDED

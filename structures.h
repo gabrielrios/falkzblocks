@@ -4,7 +4,7 @@
 typedef struct PIECE {
   int xPos, yPos;
   int hit, choice;
-  int state;
+  int state, vel;
   int format[4][2];
   SDL_Surface *img;
 } PIECE;
