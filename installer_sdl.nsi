@@ -44,10 +44,10 @@
 
 Section "falkzblocks" SecApp
 
-  SetOutPath $INSTDIR\img
-  File "img\*.*"
-  SetOutPath $INSTDIR\data
-  File "data\*.*"
+  SetOutPath $INSTDIR\data\imgs
+  File "data\imgs\*.*"
+  SetOutPath $INSTDIR\data\font
+  File "data\font\*.*"
   SetOutPath $INSTDIR
   File "bin\Release\*.*"
   FIle "C:\SDL\bin\*.dll"
@@ -82,7 +82,6 @@ Section "Uninstall"
 
   RMDir  "$SMPROGRAMS\falkzblocks\"
 
-  RMDir /r "$INSTDIR\img\"
   RMDir /r "$INSTDIR\data\"
 
 
