@@ -77,6 +77,10 @@
 		<Unit filename="structures.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="surface.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

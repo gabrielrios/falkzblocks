@@ -1,6 +1,7 @@
 #include "SDL.h"
 #include "SDL_ttf.h"
 #include "globals.h"
+#include "surface.c"
 #include "functions.c"
 #include "block.c"
 #include "piece.c"
@@ -33,6 +34,7 @@ int init() {
 
   init_block_images();
   init_grid();
+  quit_button(1);
 
   return 1;
 }
@@ -40,7 +42,7 @@ int init() {
 
 int main(int argc, char **argv) {
   SDL_Event event;
-  int game = 1, pause = 0;
+  int game = 1, pause = 0, i=0;
   srand(time(NULL));
 
   atexit(SDL_Quit);
@@ -95,6 +97,20 @@ int main(int argc, char **argv) {
       if (event.type == SDL_QUIT) {
         game = 0;
       }
+      if (event.type == SDL_MOUSEMOTION) {
+        if (event.motion.x > 330 && (event.motion.x < 440) && (event.motion.y > 450) &&  (event.motion.y < 488)) {
+          quit_button(2);
+        } else {
+          quit_button(1);
+        }
+      }
+      if (event.type == SDL_MOUSEBUTTONDOWN) {
+        if (event.button.button == SDL_BUTTON_LEFT) {
+          if (event.motion.x > 330 && (event.motion.x < 440) && (event.motion.y > 450) &&  (event.motion.y < 488)) {
+            game = 0;
+          }
+        }
+      }
       if (event.type == SDL_KEYDOWN) {
         switch(event.key.keysym.sym) {
           case SDLK_ESCAPE:
@@ -111,12 +127,28 @@ int main(int argc, char **argv) {
           case SDLK_p:
             pause = 1;
             break;
+          case SDLK_DOWN:
+            if (peca_atual.vel < 10) {
+              peca_atual.vel += 1;
+            }
+            break;
           default:
             break;
         }
       }
+      if (event.type == SDL_KEYUP) {
+        switch(event.key.keysym.sym) {
+          case SDLK_DOWN:
+            peca_atual.vel = 1;
+            break;
+          default:
+            break;
+        }
+      }
+
     }
-    if ((SDL_GetTicks() - start_time)/10 > (30 / (lvl*0.5))) {
+    i = 10/peca_atual.vel;
+    if ((SDL_GetTicks() - start_time)/i > (30 / (lvl*0.5))) {
       if (collision(&peca_atual, 1) == 1) {
         pnt += 1;
         adiciona_a_grid(peca_atual);
@@ -125,7 +157,7 @@ int main(int argc, char **argv) {
         blit_at_surface(next_background, 315, 5);
         desenha_peca(proxima_peca, 0);
       } else {
-        desce_peca(&peca_atual);
+          desce_peca(&peca_atual);
       }
       start_time = SDL_GetTicks();
     }

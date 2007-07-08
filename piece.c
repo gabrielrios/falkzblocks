@@ -6,6 +6,7 @@ void init_piece(PIECE *self, int tipo) {
   self->hit = 0;
   self->choice = tipo;
   self->state = 1;
+  self->vel = 1;
 
   if (tipo == 1) {//Line
     self->img = red_block;
@@ -89,7 +90,7 @@ void move_peca(PIECE *self, int key) {
 
 void desce_peca(PIECE *self) {
 		if (self->yPos < 16) {
-			self->yPos +=1;
+			  self->yPos +=1;
 		}
 }
 
