@@ -100,6 +100,9 @@ int rotaciona_peca(PIECE *self) {
   } else if(self->choice == 1 && self->xPos+self->format[3][0] >= 7 && self->state == 1) {
     return 0;
   }
+  if (collision(self, 1) || collision(self, 2) || collision(self, 3)) {
+    return 0;
+  }
   if (self->choice == 1) {
     if (self->state == 1 ){
       self->format[0][0] = 0; self->format[0][1] = 0;

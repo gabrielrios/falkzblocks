@@ -87,12 +87,14 @@ int main(int argc, char **argv) {
     desenha_peca(peca_atual, 1);
     init_placar();
     placar(lvl, pnt);
+
     if (pause) {
       paused(pause);
       pause = 0;
     }
 
     SDL_Flip(screen);
+
     while (SDL_PollEvent(&event)) {
       if (event.type == SDL_QUIT) {
         game = 0;
@@ -128,9 +130,9 @@ int main(int argc, char **argv) {
             pause = 1;
             break;
           case SDLK_DOWN:
-            if (peca_atual.vel < 10) {
-              peca_atual.vel += 1;
-            }
+            //if (peca_atual.vel < 10) {
+              peca_atual.vel = 10;
+            //}
             break;
           default:
             break;

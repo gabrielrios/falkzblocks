@@ -5,7 +5,7 @@
 		<Cursor position="79" topLine="0" />
 	</File>
 	<File name="functions.c" open="1" top="0" tabpos="2">
-		<Cursor position="2891" topLine="47" />
+		<Cursor position="2891" topLine="3" />
 	</File>
 	<File name="globals.h" open="1" top="0" tabpos="3">
 		<Cursor position="490" topLine="7" />
@@ -14,10 +14,10 @@
 		<Cursor position="1118" topLine="26" />
 	</File>
 	<File name="main.c" open="1" top="1" tabpos="1">
-		<Cursor position="3316" topLine="125" />
+		<Cursor position="3324" topLine="0" />
 	</File>
 	<File name="piece.c" open="1" top="0" tabpos="4">
-		<Cursor position="2717" topLine="78" />
+		<Cursor position="3048" topLine="57" />
 	</File>
 	<File name="structures.h" open="1" top="0" tabpos="7">
 		<Cursor position="233" topLine="0" />

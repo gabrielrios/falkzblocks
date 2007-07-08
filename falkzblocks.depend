@@ -215,7 +215,7 @@
 
 1183319361 source:c:\gabriel\projects\programacao\falkzblocks\branch\rewrite\falkzblocks_private.rc
 
-1183859951 source:c:\gabriel\projects\programacao\falkzblocks\trunk\main.c
+1183910905 source:c:\gabriel\projects\programacao\falkzblocks\trunk\main.c
 	"SDL.h"
 	"SDL_ttf.h"
 	"globals.h"
@@ -235,7 +235,7 @@
 
 1183827664 c:\gabriel\projects\programacao\falkzblocks\trunk\block.c
 
-1183859780 c:\gabriel\projects\programacao\falkzblocks\trunk\piece.c
+1183910903 c:\gabriel\projects\programacao\falkzblocks\trunk\piece.c
 
 1183833363 c:\gabriel\projects\programacao\falkzblocks\trunk\grid.c
 
