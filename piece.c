@@ -1,9 +1,11 @@
+//Inicializa a peça
+
 void init_piece(PIECE *self, int tipo) {
   int i;
 
-  self->xPos = 4;
+  self->xPos = 4; // Posição inicial
   self->yPos = 0;
-  self->hit = 0;
+  //self->hit = 0;
   self->choice = tipo;
   self->state = 1;
   self->vel = 1;

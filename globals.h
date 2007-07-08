@@ -29,6 +29,7 @@ int lvl = 1;
 int pnt = 0;
 Uint32 start_time;
 
+//Fonts
 TTF_Font *font;
 TTF_Font *font_placar;
 

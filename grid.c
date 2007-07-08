@@ -1,5 +1,7 @@
 void removeline_grid(int line);
 
+// Inicializa a grade que vai conter a peças
+//que ja estão no jogo
 void init_grid() {
   int i, j;
 
@@ -9,11 +11,13 @@ void init_grid() {
     }
   }
   for (i=0; i<10; i++) {
-    grid[17][i] = 8;
+    grid[17][i] = 8; // Essa linha é preenchia com 8 para garantir que a peça chegou ao fim
   }
 
 }
 
+// Adiciona um peça a grade, colocando o numero 'choice' que repesenta a peça
+//nas posições que a peça ocupa
 void adiciona_a_grid(PIECE peca) {
   int i, x, y;
   for (i=0; i<4; i++) {
@@ -23,6 +27,8 @@ void adiciona_a_grid(PIECE peca) {
   }
 }
 
+// Mostra a grade, cada valor nela é equivalente a
+// uma cor de bloco: 1-Red, 2-orange, 3-yellow, 4-green, 5-azul, 6-anil, 7-purple
 void draw_grid() {
   int x, y;
   for (y=0; y<17; y++) {
@@ -46,6 +52,10 @@ void draw_grid() {
   }
 }
 
+// Checa se a linha já esta preenchida procurando por '0's, se não tiver
+// nenhum zero na linha siginifica que ela esta preenchida, então zera-se
+// esta linha e chama a função remove_line para fazer a animação das peças
+// descendo
 void linefilled_grid() {
   int has = 1, x, y;
   for (y=0; y<17; y++) {
@@ -66,6 +76,7 @@ void linefilled_grid() {
   }
 }
 
+// Move as linhas acima da linha que foi preenchida
 void removeline_grid(int line) {
   int has = 1;
   int x, y;

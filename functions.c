@@ -1,3 +1,4 @@
+//Checa se há alguma peça a direita, a esquerda, ou abaixo da peça
 int collision(PIECE *piece, int direction) {
   int i, x, y;
 
@@ -30,6 +31,7 @@ int collision(PIECE *piece, int direction) {
   return 0;
 }
 
+// Pausa o jogo
 int paused(int pause) {
   SDL_Event event;
 
@@ -63,6 +65,8 @@ int paused(int pause) {
   return pause;
 }
 
+
+//Checa se perdeu o jogo
 int endgame(PIECE *piece) {
   if (grid[0][4] != 0 || grid[1][4] != 0) {
     return 1;
@@ -75,6 +79,7 @@ int endgame(PIECE *piece) {
 
 }
 
+//End of the game dude
 void game_over() {
   SDL_Surface *text = NULL;
   SDL_Color color = { 000, 000, 000 };
@@ -85,6 +90,7 @@ void game_over() {
   SDL_FreeSurface(text);
 }
 
+// Inicializa o texto do placar
 void init_placar() {
   SDL_Surface *text = NULL;
   SDL_Color color = { 135, 000, 135 };
@@ -96,6 +102,8 @@ void init_placar() {
 
   SDL_FreeSurface(text);
 }
+
+//Mostra o placar atual O_O
 void placar(int lvl, int pnt) {
   SDL_Surface *text = NULL;
   SDL_Color color = { 255, 255, 000 };
@@ -113,6 +121,7 @@ void placar(int lvl, int pnt) {
   SDL_FreeSurface(text);
 }
 
+// butão para sair do jogo O_O
 void quit_button(int opt) {
   SDL_Surface *button;
 

@@ -8,9 +8,9 @@
 #include "grid.c"
 #include <time.h>
 
-
+//Inicializa tudo que precisa ser inicializado.
 int init() {
-  if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) == -1) {
+  if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) == -1) {//Inicializa o SDL com VIDEO e Time apenas
     return 0;
   }
 
@@ -59,16 +59,17 @@ int main(int argc, char **argv) {
   background = surface(305, 515);
   fill_surface(background, 0xFF, 0xFF, 0xFF);
   blit_at_surface(background, 5, 5);
+
   next_background = surface(140, 200);
   fill_surface(next_background, 0, 66, 66);
   blit_at_surface(next_background, 315, 5);
+
   placar_background = surface(140, 200);
   fill_surface(placar_background, 30, 30, 130);
   blit_at_surface(placar_background, 315, 210);
 
   init_placar();
   desenha_peca(proxima_peca, 0);
-
 
   start_time = SDL_GetTicks();
 
@@ -130,9 +131,7 @@ int main(int argc, char **argv) {
             pause = 1;
             break;
           case SDLK_DOWN:
-            //if (peca_atual.vel < 10) {
-              peca_atual.vel = 10;
-            //}
+            peca_atual.vel = 10;
             break;
           default:
             break;

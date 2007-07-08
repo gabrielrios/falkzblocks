@@ -1,6 +1,6 @@
 #include "SDL_image.h"
 
-
+// Carrega imagens e retorna um surface otimizado
 SDL_Surface *load_image(char *filename) {
   SDL_Surface *loaded = NULL, *optimized = NULL;
 
@@ -18,6 +18,7 @@ SDL_Surface *load_image(char *filename) {
   return optimized;
 }
 
+//Abstração da função BlitSurface
 void blit_at_surface(SDL_Surface *source, int x, int y) {
   SDL_Rect pos;
 
@@ -27,11 +28,14 @@ void blit_at_surface(SDL_Surface *source, int x, int y) {
   SDL_BlitSurface(source, NULL, screen, &pos);
 }
 
+//Prenche uma surface com as cores R,G,B
 void fill_surface(SDL_Surface *self, Uint8 r, Uint8 g, Uint8 b) {
   Uint32 color = SDL_MapRGB(self->format, r, g, b);
   SDL_FillRect(self, NULL, color);
 }
 
+
+//Cria uma nova surface
 SDL_Surface* surface(int W, int H) {
   SDL_Surface *self, *opti;
   self = SDL_CreateRGBSurface(SDL_SWSURFACE, W, H, 32, 0, 0, 0, 0);
