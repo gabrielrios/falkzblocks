@@ -1,4 +1,4 @@
-//Checa se há alguma peça a direita, a esquerda, ou abaixo da peça
+//Checa se ha alguma peca a direita, a esquerda, ou abaixo da peca
 int collision(PIECE *piece, int direction) {
   int i, x, y;
 
@@ -121,7 +121,7 @@ void placar(int lvl, int pnt) {
   SDL_FreeSurface(text);
 }
 
-// butão para sair do jogo O_O
+// butao para sair do jogo O_O
 void quit_button(int opt) {
   SDL_Surface *button;
 

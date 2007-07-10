@@ -215,7 +215,7 @@
 
 1183319361 source:c:\gabriel\projects\programacao\falkzblocks\branch\rewrite\falkzblocks_private.rc
 
-1183910905 source:c:\gabriel\projects\programacao\falkzblocks\trunk\main.c
+1184087971 source:c:\gabriel\projects\programacao\falkzblocks\trunk\main.c
 	"SDL.h"
 	"SDL_ttf.h"
 	"globals.h"
@@ -224,23 +224,26 @@
 	"block.c"
 	"piece.c"
 	"grid.c"
+	"menu.c"
 	<time.h>
 
-1183847626 c:\gabriel\projects\programacao\falkzblocks\trunk\globals.h
+1183923451 c:\gabriel\projects\programacao\falkzblocks\trunk\globals.h
 	"structures.h"
 
-1183837187 c:\gabriel\projects\programacao\falkzblocks\trunk\structures.h
+1183924446 c:\gabriel\projects\programacao\falkzblocks\trunk\structures.h
 
-1183857846 c:\gabriel\projects\programacao\falkzblocks\trunk\functions.c
+1183924539 c:\gabriel\projects\programacao\falkzblocks\trunk\functions.c
 
-1183827664 c:\gabriel\projects\programacao\falkzblocks\trunk\block.c
+1183924420 c:\gabriel\projects\programacao\falkzblocks\trunk\block.c
 
-1183910903 c:\gabriel\projects\programacao\falkzblocks\trunk\piece.c
+1183924346 c:\gabriel\projects\programacao\falkzblocks\trunk\piece.c
 
-1183833363 c:\gabriel\projects\programacao\falkzblocks\trunk\grid.c
+1183924525 c:\gabriel\projects\programacao\falkzblocks\trunk\grid.c
 
-1183857095 c:\gabriel\projects\programacao\falkzblocks\trunk\surface.c
+1184023885 c:\gabriel\projects\programacao\falkzblocks\trunk\surface.c
 	"SDL_image.h"
 
 1183319361 source:c:\gabriel\projects\programacao\falkzblocks\trunk\falkzblocks_private.rc
+
+1184087860 c:\gabriel\projects\programacao\falkzblocks\trunk\menu.c
 

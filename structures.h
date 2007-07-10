@@ -1,13 +1,13 @@
 #ifndef STRUCTURES_H_INCLUDED
 #define STRUCTURES_H_INCLUDED
 
-// Estrutura da peças
-// xPos yPos = posição relativa da tela
-// choice = Qual peça
-// State = qual a rotação da peça
+// Estrutura da pecas
+// xPos yPos = posicao relativa da tela
+// choice = Qual peca
+// State = qual a rotaca da peca
 // vel = Velocidade de descida
-// Format = a peça
-// img = referencia para a imgem que forma a peça
+// Format = a peca
+// img = referencia para a imgem que forma a peca
 typedef struct PIECE {
   int xPos, yPos;
   int choice;

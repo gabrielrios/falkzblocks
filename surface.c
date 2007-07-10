@@ -18,7 +18,7 @@ SDL_Surface *load_image(char *filename) {
   return optimized;
 }
 
-//Abstração da função BlitSurface
+//Abstracao da funcao BlitSurface
 void blit_at_surface(SDL_Surface *source, int x, int y) {
   SDL_Rect pos;
 
@@ -33,7 +33,6 @@ void fill_surface(SDL_Surface *self, Uint8 r, Uint8 g, Uint8 b) {
   Uint32 color = SDL_MapRGB(self->format, r, g, b);
   SDL_FillRect(self, NULL, color);
 }
-
 
 //Cria uma nova surface
 SDL_Surface* surface(int W, int H) {

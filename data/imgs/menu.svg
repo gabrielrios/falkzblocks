@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46dev+devel"
+   sodipodi:docname="menu.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ff00ff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="372.04724"
+     inkscape:cy="823.26714"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="766"
+     inkscape:window-height="621"
+     inkscape:window-x="177"
+     inkscape:window-y="3" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3988"
+       transform="translate(-13.71556,0)"
+       inkscape:export-filename="C:\Gabriel\projects\programacao\falkzblocks\trunk\data\imgs\menu.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         sodipodi:nodetypes="ccccccc"
+         id="path2252"
+         d="M 185.63091,193.96967 L 185.63091,168.05596 C 185.63091,162.3818 185.69392,162.43317 199.83024,162.43317 L 380.72965,162.60909 L 381.20297,188.44467 C 381.20297,193.71563 382.62645,193.57853 365.29972,193.57853 L 185.63091,193.96967 z"
+         style="fill:#8ae234;fill-rule:evenodd;stroke:#000000;stroke-width:4.04091263;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text3597"
+         y="183.6815"
+         x="283.63635"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Abstract"
+         xml:space="preserve"><tspan
+           style="font-size:8px;text-align:center;text-anchor:middle"
+           y="183.6815"
+           x="283.63635"
+           id="tspan3599"
+           sodipodi:role="line">New game</tspan></text>
+    </g>
+    <g
+       id="g3993"
+       transform="translate(-29.71556,-67.16077)"
+       inkscape:export-filename="C:\Gabriel\projects\programacao\falkzblocks\trunk\data\imgs\menu.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         sodipodi:nodetypes="ccccccc"
+         id="path3982"
+         d="M 406.1998,261.13044 L 406.1998,235.21673 C 406.1998,229.54257 406.26281,229.59394 420.39913,229.59394 L 601.29854,229.76986 L 601.77186,255.60544 C 601.77186,260.8764 603.19534,260.7393 585.86861,260.7393 L 406.1998,261.13044 z"
+         style="fill:#73a93f;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.04091263;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text3984"
+         y="250.84227"
+         x="504.20523"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Abstract"
+         xml:space="preserve"><tspan
+           style="font-size:8px;text-align:center;text-anchor:middle"
+           y="250.84227"
+           x="504.20523"
+           id="tspan3986"
+           sodipodi:role="line">New game</tspan></text>
+    </g>
+    <g
+       transform="translate(-13.71556,41.16077)"
+       id="g4776"
+       inkscape:export-filename="C:\Gabriel\projects\programacao\falkzblocks\trunk\data\imgs\menu.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         style="fill:#8ae234;fill-rule:evenodd;stroke:#000000;stroke-width:4.04091263;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 185.63091,193.96967 L 185.63091,168.05596 C 185.63091,162.3818 185.69392,162.43317 199.83024,162.43317 L 380.72965,162.60909 L 381.20297,188.44467 C 381.20297,193.71563 382.62645,193.57853 365.29972,193.57853 L 185.63091,193.96967 z"
+         id="path4778"
+         sodipodi:nodetypes="ccccccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Abstract"
+         x="283.63635"
+         y="183.6815"
+         id="text4780"><tspan
+           sodipodi:role="line"
+           id="tspan4782"
+           x="283.63635"
+           y="183.6815"
+           style="font-size:8px;text-align:center;text-anchor:middle">REcords</tspan></text>
+    </g>
+    <g
+       id="g4924"
+       transform="translate(-16,0)"
+       inkscape:export-filename="C:\Gabriel\projects\programacao\falkzblocks\trunk\data\imgs\menu.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         sodipodi:nodetypes="ccccccc"
+         id="path4786"
+         d="M 392.48424,235.13044 L 392.48424,209.21673 C 392.48424,203.54257 392.54725,203.59394 406.68357,203.59394 L 587.58298,203.76986 L 588.0563,229.60544 C 588.0563,234.8764 589.47978,234.7393 572.15305,234.7393 L 392.48424,235.13044 z"
+         style="fill:#73a93f;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.04091263;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text4788"
+         y="224.84227"
+         x="490.48969"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Abstract"
+         xml:space="preserve"><tspan
+           style="font-size:8px;text-align:center;text-anchor:middle"
+           y="224.84227"
+           x="490.48969"
+           id="tspan4790"
+           sodipodi:role="line">records</tspan></text>
+    </g>
+    <g
+       transform="translate(-13.71556,82.16077)"
+       id="g4819"
+       inkscape:export-filename="C:\Gabriel\projects\programacao\falkzblocks\trunk\data\imgs\menu.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         style="fill:#8ae234;fill-rule:evenodd;stroke:#000000;stroke-width:4.04091263;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 185.63091,193.96967 L 185.63091,168.05596 C 185.63091,162.3818 185.69392,162.43317 199.83024,162.43317 L 380.72965,162.60909 L 381.20297,188.44467 C 381.20297,193.71563 382.62645,193.57853 365.29972,193.57853 L 185.63091,193.96967 z"
+         id="path4821"
+         sodipodi:nodetypes="ccccccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Abstract"
+         x="283.63635"
+         y="183.6815"
+         id="text4823"><tspan
+           sodipodi:role="line"
+           id="tspan4825"
+           x="283.63635"
+           y="183.6815"
+           style="font-size:8px;text-align:center;text-anchor:middle">Quit</tspan></text>
+    </g>
+    <g
+       id="g4912"
+       transform="translate(-16,0)"
+       inkscape:export-filename="C:\Gabriel\projects\programacao\falkzblocks\trunk\data\imgs\menu.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         sodipodi:nodetypes="ccccccc"
+         id="path4827"
+         d="M 392.48424,276.13044 L 392.48424,250.21673 C 392.48424,244.54257 392.54725,244.59394 406.68357,244.59394 L 587.58298,244.76986 L 588.0563,270.60544 C 588.0563,275.8764 589.47978,275.7393 572.15305,275.7393 L 392.48424,276.13044 z"
+         style="fill:#73a93f;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.04091263;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text4829"
+         y="265.84229"
+         x="490.48969"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Abstract"
+         xml:space="preserve"><tspan
+           style="font-size:8px;text-align:center;text-anchor:middle"
+           y="265.84229"
+           x="490.48969"
+           id="tspan4831"
+           sodipodi:role="line">Quit</tspan></text>
+    </g>
+  </g>
+</svg>
