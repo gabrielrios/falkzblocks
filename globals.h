@@ -25,8 +25,8 @@ PIECE proxima_peca;
 int grid[18][10];
 
 //Level and Pontuation Thing
-int lvl = 1;
-int pnt = 0;
+int lvl;
+int pnt ;
 Uint32 start_time;
 
 //Fonts

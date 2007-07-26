@@ -9,6 +9,8 @@
 #include "menu.c"
 #include <time.h>
 
+int main_game();
+
 //Inicializa tudo que precisa ser inicializado.
 int init() {
   if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) == -1) {//Inicializa o SDL com VIDEO e Time apenas
@@ -34,7 +36,7 @@ int init() {
   font_placar = TTF_OpenFont(".\\data\\font\\ABSTRACT.ttf", 6);
 
   init_block_images();
-  init_grid();
+
 
   return 1;
 }
@@ -61,9 +63,14 @@ int main(int argc, char **argv) {
 
 int main_game() {
   SDL_Event event;
-  int game = 1, pause = 0, i=0;
+  int game = 1, pause = 0, rate=0;
+
+  lvl = 1;
+  pnt = 0;
 
   quit_button(1);
+
+  init_grid();
 
   init_piece(&peca_atual, rand()%7+1);
   init_piece(&proxima_peca, rand()%7+1);
@@ -160,8 +167,8 @@ int main_game() {
       }
 
     }
-    i = 10/peca_atual.vel;
-    if ((SDL_GetTicks() - start_time)/i > (30 / (lvl*0.5))) {
+    rate = 10/peca_atual.vel;
+    if ((SDL_GetTicks() - start_time)/rate > (30 / (lvl*0.5))) {
       if (collision(&peca_atual, 1) == 1) {
         pnt += 1;
         adiciona_a_grid(peca_atual);
@@ -174,6 +181,7 @@ int main_game() {
       }
       start_time = SDL_GetTicks();
     }
+    SDL_Delay(20);
   }
   return 1;
 }
